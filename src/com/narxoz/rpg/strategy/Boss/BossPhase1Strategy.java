@@ -1,6 +1,8 @@
-package com.narxoz.rpg.strategy;
+package com.narxoz.rpg.strategy.Boss;
 
-public class BalancedStrategy implements CombatStrategy {
+import com.narxoz.rpg.strategy.CombatStrategy;
+
+public class BossPhase1Strategy implements CombatStrategy {
 
     @Override
     public int calculateDamage(int basePower) {
@@ -14,6 +16,6 @@ public class BalancedStrategy implements CombatStrategy {
 
     @Override
     public String getName() {
-        return "Balanced";
+        return "Boss Phase 1 (Balanced)";
     }
 }
