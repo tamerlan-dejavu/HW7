@@ -1,4 +1,6 @@
-package com.narxoz.rpg.strategy;
+package com.narxoz.rpg.strategy.Hero;
+
+import com.narxoz.rpg.strategy.CombatStrategy;
 
 public class AggressiveStrategy implements CombatStrategy {
 
