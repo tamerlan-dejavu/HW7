@@ -20,7 +20,7 @@ public class PartySupport implements GameObserver {
         for (Hero hero : party) {
             if (hero.getName().equals(heroName) && hero.isAlive()) {
                 hero.heal(HEAL_AMOUNT);
-                System.out.println("[PARTY] Emergency heal! " + heroName + " restored " + HEAL_AMOUNT + " HP (now " + hero.getHp() + ").");
+                System.out.println("Emergency heal! " + heroName + " restored " + HEAL_AMOUNT + " HP (now " + hero.getHp() + ").");
                 return;
             }
         }

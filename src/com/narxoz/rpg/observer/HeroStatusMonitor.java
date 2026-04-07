@@ -20,7 +20,7 @@ public class HeroStatusMonitor implements GameObserver {
     }
 
     private void printStatus() {
-        System.out.println("[STATUS] Party overview:");
+        System.out.println("Party overview:");
         for (Hero hero : party) {
             String state = hero.isAlive() ? hero.getHp() + "/" + hero.getMaxHp() + " HP" : "DEAD";
             System.out.println("  " + hero.getName() + ": " + state);
