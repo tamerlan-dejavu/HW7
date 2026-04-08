@@ -15,7 +15,8 @@ public class HeroStatusMonitor implements GameObserver {
     @Override
     public void onEvent(GameEvent event) {
         switch (event.getType()) {
-            case ATTACK_LANDED, HERO_LOW_HP, HERO_DIED, BOSS_PHASE_CHANGED, BOSS_DEFEATED -> printStatus();
+            case HERO_LOW_HP, HERO_DIED -> printStatus();
+            default -> {}
         }
     }
 
