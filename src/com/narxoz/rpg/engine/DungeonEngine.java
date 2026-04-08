@@ -8,8 +8,8 @@ import com.narxoz.rpg.observer.GameEventType;
 import java.util.List;
 
 public class DungeonEngine {
-    private int MAX_ROUNDS = 100;
-    private int LOW_HP_THRESHOLD = 30;
+    private static final int MAX_ROUNDS = 100;
+    private static final double LOW_HP_THRESHOLD_PCT = 0.30;
 
     private List<Hero> party;
     private DungeonBoss boss;
@@ -57,7 +57,7 @@ public class DungeonEngine {
 
                 if (!hero.isAlive()) {
                     fire(GameEventType.HERO_DIED, hero.getName(), 0);
-                } else if (hero.getHp() <= LOW_HP_THRESHOLD) {
+                } else if (hero.getHp() <= hero.getMaxHp() * LOW_HP_THRESHOLD_PCT) {
                     fire(GameEventType.HERO_LOW_HP, hero.getName(), hero.getHp());
                 }
             }
